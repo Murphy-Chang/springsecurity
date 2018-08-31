@@ -48,10 +48,10 @@ public class LoginController {
 			if(request.getParameter("logout") != null){
 				model.addAttribute("message", "注销成功！");
 			}
-			return "/login/login";
+			return "login/login";
 		}catch (Exception e){
 			logger.info("跳转--登录页面出错, msg:{}", e.getMessage());
-			return "/error/error500";
+			return "error/error500";
 		}
 	}
 

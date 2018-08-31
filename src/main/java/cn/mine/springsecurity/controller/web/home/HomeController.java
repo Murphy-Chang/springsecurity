@@ -30,10 +30,10 @@ public class HomeController {
 	public String home(){
 		logger.info("跳转--首页");
 		try{
-			return "/home/home";
+			return "home/home";
 		}catch (Exception e){
 			logger.info("跳转--首页出错, msg:{}", e.getMessage());
-			return "/error/500";
+			return "error/500";
 		}
 	}
 

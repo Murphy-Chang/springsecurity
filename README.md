@@ -28,6 +28,9 @@ session超时管理\
 登录失败回调CustomLoginFailureHandler\
 注销成功回调CustomLogoutSuccessHandler
 
+sql文件再resources下
+别忘记建立database(本demo的database名为mine)哦
+
 欢迎交流和指正错误\
 @author Murphy.Chang
 

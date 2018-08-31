@@ -64,10 +64,10 @@ public class CommonController {
 	public String error403(){
 		logger.info("跳转--403页面");
 		try{
-			return "/error/403";
+			return "error/403";
 		}catch (Exception e){
 			logger.info("跳转--403页面出错, msg:{}", e.getMessage());
-			return "/error/500";
+			return "error/500";
 		}
 	}
 
