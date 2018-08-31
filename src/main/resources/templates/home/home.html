@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:fragment="head">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="description" content="主页" />
+	<title>主页</title>
+</head>
+<body>
+	<form action="/logout">
+		<div th:text="${session.userDetail.userName}"></div>
+		<div>登录成功</div>
+		<button>注销</button>
+	</form>
+</body>
+</html>
