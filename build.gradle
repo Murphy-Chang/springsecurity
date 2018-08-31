@@ -28,6 +28,7 @@ dependencies {
 			'org.springframework.boot:spring-boot-starter-security',
 			'org.springframework.boot:spring-boot-starter-thymeleaf',
 			'org.springframework.boot:spring-boot-starter-web',
+			'org.springframework.boot:spring-boot-starter-tomcat',
 			'mysql:mysql-connector-java:6.0.5',
 			'com.alibaba:fastjson:1.2.31'
 	)

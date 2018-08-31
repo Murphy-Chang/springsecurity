@@ -1,7 +1,6 @@
 package cn.mine.springsecurity.security.filter;
 
 import cn.mine.springsecurity.security.service.CaptchaAuthenticationProvider;
-import cn.mine.springsecurity.security.service.CaptchaAuthenticationProvider;
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
