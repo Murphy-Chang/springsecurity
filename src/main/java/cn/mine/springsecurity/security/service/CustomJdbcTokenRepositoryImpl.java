@@ -39,7 +39,7 @@ public class CustomJdbcTokenRepositoryImpl extends JdbcTokenRepositoryImpl {
 	@Transactional
 	public void updateToken(String series, String tokenValue, Date lastUsed) {
 		//更新
-		TPersistentLogins entity = persistentLoginsRepository.getListBySeries(series).get(0);
+		TPersistentLogins entity = persistentLoginsRepository.findBySeries(series);
 		entity.setToken(tokenValue);
 		entity.setLastUsed(DateUtil.formatDate1(lastUsed));
 		persistentLoginsRepository.save(entity);
@@ -51,13 +51,14 @@ public class CustomJdbcTokenRepositoryImpl extends JdbcTokenRepositoryImpl {
 	 * If an error occurs, it will be reported and null will be returned (since the result
 	 * should just be a failed persistent login).
 	 *
-	 * @param seriesId
+	 * @param series
 	 * @return the token matching the series, or null if no match found or an exception
 	 * occurred.
 	 */
 	@Override
 	public PersistentRememberMeToken getTokenForSeries(String series) {
-		TPersistentLogins entity = persistentLoginsRepository.getListBySeries(series).get(0);
+		TPersistentLogins entity = persistentLoginsRepository.findBySeries(series);
+		if(entity == null) return null;
 		return new PersistentRememberMeToken(entity.getUserName(), entity.getSeries(), entity.getToken(), DateUtil.parseDate1(entity.getLastUsed()));
 	}
 

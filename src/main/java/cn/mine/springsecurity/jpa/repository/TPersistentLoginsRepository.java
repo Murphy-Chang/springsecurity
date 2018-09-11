@@ -17,5 +17,5 @@ import java.util.List;
 public interface TPersistentLoginsRepository extends CrudRepository<TPersistentLogins, Integer> {
 	public void deleteListByUserName(String userName);
 	
-	public List<TPersistentLogins> getListBySeries(String series);
+	public TPersistentLogins findBySeries(String series);
 }
